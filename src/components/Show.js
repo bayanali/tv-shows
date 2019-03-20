@@ -5,6 +5,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import {get} from 'lodash';
 
 export default function Show(props) {
    
@@ -14,7 +15,7 @@ export default function Show(props) {
         <Card>
                 <CardMedia
                     style={{height:0, paddingTop:'100%'}}
-                    image={props.show.image.original}
+                    image={get(props,"show.image.original",'')}
                 />
 
                 <CardContent>

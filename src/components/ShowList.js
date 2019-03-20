@@ -39,8 +39,7 @@ export class ShowList extends Component {
                 });
 
                     console.log('Hello from response')
-                    // if (showsResults.length !== 0)
-                    //   this.setState({shows: showsResults})
+                    this.setState({shows: showsResults})
                     console.log(showsResults)
             
             })
