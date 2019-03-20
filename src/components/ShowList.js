@@ -4,13 +4,14 @@ import axios from 'axios';
 import TextField from '@material-ui/core/TextField';
 import Grid  from '@material-ui/core/Grid';
 
+
 export class ShowList extends Component {
     state = {
         shows: [],
         searchInput: ''
     }
 
-    componentDidMount() {
+    componentWillMount() {
 
         axios.get('http://api.tvmaze.com/shows?page=1')
         .then(res => {
@@ -57,16 +58,18 @@ export class ShowList extends Component {
 
   render() {
     return (
+   
       <div>
           <TextField
-            style={{padding:24}}
+            style={{paddingTop:'3%',
+                    paddingLeft:'43.5%'}}
             placeholder='Search Shows'
             onKeyPress={this.onSearchInputChange}
           >
-
           </TextField>
-          <Grid container spacing={24}>
 
+          <Grid container spacing={24}>
+            
                 {this.state.shows.map( show => (
 
                     <Grid item xs={12} sm={6} lg={4} xl={3} key={show.id} style={{padding: "40px"}}>
@@ -74,10 +77,11 @@ export class ShowList extends Component {
                     </Grid>
 
                 ))}
-
+            
           </Grid>
         
       </div>
+
     )
   }
 }
