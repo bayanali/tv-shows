@@ -9,7 +9,7 @@ export default function NavBar() {
     <div>
       <AppBar position="static">
           <ToolBar>
-                <Typography variant="title" color="inherit" align="center" component="h1">
+                <Typography variant="headline" color="inherit" align="center">
                     TV-Shows
                 </Typography>
                

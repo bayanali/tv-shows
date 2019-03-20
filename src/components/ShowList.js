@@ -33,13 +33,13 @@ export class ShowList extends Component {
             axios.get(`http://api.tvmaze.com/search/shows?q=${this.state.searchInput}`)
             .then((res) => {  
                 
-                const showsResults = []
+                let showsResults = []
                 res.data.forEach(element => {
                     showsResults.push(element.show)
                 });
 
-                    console.log('Hello from response')
-                    this.setState({shows: showsResults})
+                    if (showsResults.length !== 0)
+                        this.setState({shows: showsResults})
                     console.log(showsResults)
             
             })

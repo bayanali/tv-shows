@@ -19,7 +19,7 @@ export default function Show(props) {
                 />
 
                 <CardContent>
-                    <Typography gutterBottom variant="h5" color="inherit">
+                    <Typography variant="subheading" color="inherit">
                         {props.show.name}
                     </Typography>
 
