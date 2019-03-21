@@ -61,9 +61,9 @@ export class ShowList extends Component {
    
       <div>
           <TextField
-            style={{paddingTop:'3%',
-                    paddingLeft:'43.5%'}}
-            placeholder='Search Shows'
+            style={{padding:'3%',
+                    width:'94%'}}
+            placeholder='Search Shows... Press Enter When You Finish Typing'
             onKeyPress={this.onSearchInputChange}
           >
           </TextField>
